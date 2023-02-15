@@ -4,9 +4,10 @@ Directions
 
 1. Run install-deps.sh. It will ask for root. It will install all dependencies needed for the plugins.
     
-2. Open config.txt. Change `export VSPREFIX="$HOME/.hybrid"` to whatever Location you like. 
-   Likewise open the misc.ini example file and change `vsPluginsPath=/home/fletcher/.hybrid/vsplugins` to the same path. 
-   By default Hybrid will default to `$HOME/opt/vapoursynth/vsplugins` unless that line is included in the misc.ini
+2. Open config.txt. Change `"$HOME/opt/vapoursynth"` to whatever Location you like if you want. 
+   By default Hybrid will use `$HOME/opt/vapoursynth` unless you chang this. I prefer `$HOME/.hybrid
+   I you do change this open the misc.ini example file and change `vsPluginsPath=/home/fletcher/.hybrid/vsplugins` to the same path. 
+   
     
 3. Run build-plugins.sh. It will install the plugins to whatever is `$VSPREFIX`.
 
