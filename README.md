@@ -9,3 +9,5 @@ Directions
    By default Hybrid will default to `$HOME/opt/vapoursynth/vsplugins` unless that line is included in the misc.ini
     
 3. Run build-plugins.sh. It will install the plugins to whatever is `$VSPREFIX`.
+
+Note: You will need to make sure you have a copy of Vscripts either in the same directory of the Hybrid binary or on the `$HOME/.hybrid/` folder
