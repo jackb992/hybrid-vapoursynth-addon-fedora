@@ -1,26 +1,14 @@
-ghdl HolyWu/L-SMASH-Works
-ghdl l-smash/l-smash
+#!/bin/bash
+git clone https://github.com/HomeOfAviSynthPlusEvolution/L-SMASH-Works build
 
-./configure --prefix="$vsprefix" --extra-cflags="$CFLAGS" || cat config.log
-make -j$JOBS lib
-cp liblsmash.a ..
+cd build
 
-cd ../VapourSynth
+cd VapourSynth
 
-mv meson.build meson.build.ORIGINAL
-sed < meson.build.ORIGINAL > meson.build \
--e "/vapoursynth_dep *=/i\
-liblsmash_dep = declare_dependency(link_args : ['-L../../build', '-llsmash'],\\
-                                   include_directories : ['../../build'])\n" \
--e "s/dependency('liblsmash')/liblsmash_dep/g"
+meson build
 
-if [ -z "$vsprefix" ]; then
-    vsprefix="/usr/local"
-fi
+ninja -C build
 
-CFLAGS="$CFLAGS -Wno-deprecated-declarations" meson build --prefix="$vsprefix"
-ninja -C build -j $JOBS
+cd build
 
-cp build/libvslsmashsource.so ../libvslsmashsource.so
-cd ..
-finish libvslsmashsource.so
+cp libvslsmashsource.so $VSPREFIX/vsplugins/libvslsmashsource.so

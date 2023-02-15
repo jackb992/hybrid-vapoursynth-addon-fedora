@@ -1,5 +1,14 @@
-ghdl HomeOfVapourSynthEvolution/VapourSynth-LGhost
+#!/bin/bash
 
-CFLAGS="$CFLAGS -Wno-deprecated-declarations" meson build --prefix="$vsprefix"
-ninja -C build -j $JOBS
-ninja -C build install -j $JOBS
+git clone https://github.com/HomeOfVapourSynthEvolution/VapourSynth-LGhost build
+
+cd build
+
+meson build
+ninja -C build
+
+cd build
+
+cp liblghost.so $VSPREFIX/vsplugins/liblghost.so
+
+
