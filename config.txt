@@ -1,5 +1,5 @@
 # Install directory, in theory the only one variable you could change
-export VSPREFIX=""$HOME/opt/vapoursynth"
+export VSPREFIX="$HOME/opt/vapoursynth"
 #
 # Jobs number, so the hyperthread cores number
 export JOBS=$(nproc)
