@@ -1,4 +1,4 @@
-This Repo is for hosting the Plugins build set up for Hybrid and Vapoursynth On Arch Linux.
+This Repo is for hosting the Plugins build set up for Hybrid and Vapoursynth On Fedora.
 
 Directions
 
