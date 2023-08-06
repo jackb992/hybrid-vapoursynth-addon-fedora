@@ -1,5 +1,5 @@
 #!/bin/sh
-# Caution: this script is for Arch Linux and its derivatives.
+export PKG_CONFIG_PATH=/usr/lib/pkgconfig
 set -e
 s_begin=$( date "+%s")
 
