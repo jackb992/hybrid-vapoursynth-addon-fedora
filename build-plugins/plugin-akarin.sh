@@ -1,1 +1,1 @@
-mkgh AkarinVS/vapoursynth-plugin libakarin
+mkgh jackb992/vapoursynth-plugin libakarin
