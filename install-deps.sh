@@ -1,8 +1,6 @@
 #!/bin/sh
-
-  sudo pacman -Syu
-  sudo pacman --noconfirm -S  \
-    base-devel \
+  sudo dnf group install "C Development Tools and Libraries" "Development Tools"
+  sudo dnf install  \
     cmake \
     yasm \
     git \
@@ -13,7 +11,6 @@
     python-pip \
     xz \
     fftw \
-    opencl-icd-loader \
     boost \
     libbluray \
     libpng \
@@ -22,22 +19,35 @@
     python-testresources \
     nasm \
     ffmpeg \
-    vapoursynth \
+    python3-vapoursynth \
+    vapoursynth-devel \
+    vapoursynth-libs \
+    vapoursynth-tools \
     glib2 \
-    opencl-headers\
-    meson
-git clone https://aur.archlinux.org/waifu2x-converter-cpp-git.git build
-cd build
-makepkg --noconfirm -si
-cd ..
-sudo cp -r /usr/include/vapoursynth /usr/local/include/vapoursynth
-if pacman -Qi nvidia > /dev/null ; then
-  sudo pacman -S opencl-nvidia opencv-cuda
-  echo "Installation of Dependencies Finished"
+    meson \
+    waifu2x-converter-cpp-devel \
+    llvm15 \
+    libass-devel \
+    fftw-devel \
+    ImageMagick-c++-devel \
+    libbluray-devel
 
-else
-  echo "Installation of Dependencies Finished"
-  sudo pacman -S opencl-mesa opencv
-fi
+git clone https://github.com/l-smash/l-smash.git build
+cd build
+./configure
+make
+sudo make install
+cd ..
+rm -rf build
+git clone https://github.com/KhronosGroup/OpenCL-Headers
+cmake -D CMAKE_INSTALL_PREFIX=./OpenCL-Headers/install -S ./OpenCL-Headers -B ./OpenCL-Headers/build  
+cmake --build ./OpenCL-Headers/build --target install
+git clone https://github.com/KhronosGroup/OpenCL-ICD-Loader
+cmake -D CMAKE_PREFIX_PATH="$PWD"/OpenCL-Headers/install -D CMAKE_INSTALL_PREFIX=./OpenCL-ICD-Loader/install -S ./OpenCL-ICD-Loader -B ./OpenCL-ICD-Loader/build 
+cmake --build ./OpenCL-ICD-Loader/build --target install
+rm -rf OpenCL-ICD-Loader
+rm -rf OpenCL-Headers
+sudo cp -r /usr/include/vapoursynth /usr/local/include/vapoursynth
+echo "Installation of Dependencies Finished"
     
 exit
