@@ -1,6 +1,6 @@
 mkdir build
 cd build
-wget http://www.avisynth.nl/users/vcmohan/vcmod/vcmod_src.7z
+wget http://web.archive.org/web/20170701065515if_/http://www.avisynth.nl/users/vcmohan/vcmod/vcmod_src.7z
 7z e vcmod_src.7z
   rm -fr VSHelper.h VapourSynth.h
 
