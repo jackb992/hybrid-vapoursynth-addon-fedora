@@ -34,6 +34,8 @@
     libbluray-devel \
     llvm-devel \
     llvm15-devel \
+    boost-devel \
+    rocm-opencl-devel \
     ffmpeg-devel --allowerasing
 
 git clone https://github.com/l-smash/l-smash.git build
