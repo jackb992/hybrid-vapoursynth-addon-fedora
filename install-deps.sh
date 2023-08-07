@@ -37,7 +37,7 @@
     boost-devel \
     rocm-opencl-devel \
     tbb-devel \
-    vulkan-loader-devel
+    vulkan-loader-devel \
     ffmpeg-devel --allowerasing
 
 git clone https://github.com/l-smash/l-smash.git build
