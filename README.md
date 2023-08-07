@@ -10,11 +10,8 @@ Directions
  
    By default Hybrid will use `$HOME/opt/vapoursynth` unless you change this. 
    
-   I prefer `$HOME/.hybrid`.
-   
    If you do change this open the misc.ini example file and change `vsPluginsPath=/home/fletcher/.hybrid/vsplugins` to the same path. 
    
-    
 3. Run build-plugins.sh. It will install the plugins to whatever is `$VSPREFIX`.
 
 Note: You will need to make sure you have a copy of Vscripts either in the same directory of the Hybrid binary or on the `$HOME/.hybrid/` folder
