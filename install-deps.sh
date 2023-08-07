@@ -32,6 +32,8 @@
     fftw-devel \
     ImageMagick-c++-devel \
     libbluray-devel \
+    llvm-devel \
+    llvm15-devel \
     ffmpeg-devel --allowerasing
 
 git clone https://github.com/l-smash/l-smash.git build
