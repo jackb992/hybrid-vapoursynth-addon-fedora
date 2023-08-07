@@ -1,5 +1,7 @@
 This Repo is for hosting the Plugins build set up for Hybrid and Vapoursynth On Fedora.
 
+All plugins needed for hybrid are included, except from vcmod (source link is dead).
+
 Directions
 
 1. Run install-deps.sh. It will ask for root. It will install all dependencies needed for the plugins.
