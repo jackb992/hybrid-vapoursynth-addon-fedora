@@ -4,4 +4,4 @@ sudo cp -r Waifu2x-w2xc/models $VSPREFIX/lib/vapoursynth
 meson build
 ninja -C build
 cd build
-cp libwaifu2x-w2xc.so $VSPREFIX/vsplugins/
+cp libwaifu2x-w2xc.so $VSPREFIX/vsplugins/libwaifu2x-w2xc.so
