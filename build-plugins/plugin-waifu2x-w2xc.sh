@@ -1,6 +1,7 @@
 git clone https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc build
 cd build
-sudo cp -r Waifu2x-w2xc/models $VSPREFIX/lib/vapoursynth
+mkdir -p $VSPREFIX/lib/vapoursynth
+cp -r Waifu2x-w2xc/models $VSPREFIX/lib/vapoursynth
 meson build
 ninja -C build
 cd build
