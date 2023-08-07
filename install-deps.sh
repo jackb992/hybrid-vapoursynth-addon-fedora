@@ -42,7 +42,7 @@
 
 git clone https://github.com/l-smash/l-smash.git build
 cd build
-./configure
+./configure --prefix='/usr' --enable-shared --disable-static
 make
 sudo make install
 cd ..
