@@ -9,4 +9,4 @@ ninja -C build
 
 cd build
 
-cp libeedi3m.so $VSPREFIX/vsplugins/liblibeedi3m.so
+cp libeedi3m.so $VSPREFIX/vsplugins/libeedi3m.so
