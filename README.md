@@ -1,6 +1,6 @@
 This Repo is for hosting the Plugins build set up for Hybrid and Vapoursynth On Fedora.
 
-All plugins needed for hybrid are included, except from vcmod (source link is dead).
+All plugins needed for hybrid are included
 
 Directions
 
