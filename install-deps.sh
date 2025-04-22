@@ -38,7 +38,6 @@
     rocm-opencl-devel \
     tbb-devel \
     vulkan-loader-devel \
-    ffmpeg-devel --allowerasing \
     clang \
     xxhash \
     xxhash-devel \
@@ -46,7 +45,8 @@
     autoconf \
     automake \
     libtool \
-    turbojpeg-devel
+    turbojpeg-devel \
+    ffmpeg-devel --allowerasing
 
 git clone https://github.com/l-smash/l-smash.git build
 cd build
