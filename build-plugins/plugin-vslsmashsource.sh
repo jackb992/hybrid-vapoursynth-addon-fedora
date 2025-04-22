@@ -1,6 +1,7 @@
 #!/bin/bash
-export PKG_CONFIG_PATH=/usr/lib/pkgconfig
-git clone -b 70e19fb19d https://github.com/HomeOfAviSynthPlusEvolution/L-SMASH-Works build
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
+git clone https://github.com/HomeOfAviSynthPlusEvolution/L-SMASH-Works build
 
 cd build
 
