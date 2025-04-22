@@ -39,7 +39,9 @@
     tbb-devel \
     vulkan-loader-devel \
     ffmpeg-devel --allowerasing \
-    clang
+    clang \
+    xxhash \
+    xxhash-devel
 
 git clone https://github.com/l-smash/l-smash.git build
 cd build
