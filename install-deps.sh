@@ -38,7 +38,8 @@
     rocm-opencl-devel \
     tbb-devel \
     vulkan-loader-devel \
-    ffmpeg-devel --allowerasing
+    ffmpeg-devel --allowerasing \
+    clang
 
 git clone https://github.com/l-smash/l-smash.git build
 cd build
