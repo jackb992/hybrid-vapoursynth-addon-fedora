@@ -45,7 +45,8 @@
     autoreconf \
     autoconf \
     automake \
-    libtool
+    libtool \
+    turbojpeg-devel
 
 git clone https://github.com/l-smash/l-smash.git build
 cd build
