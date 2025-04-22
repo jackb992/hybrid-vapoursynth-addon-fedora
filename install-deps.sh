@@ -46,6 +46,7 @@
     automake \
     libtool \
     turbojpeg-devel \
+    gsl-devel \
     ffmpeg-devel --allowerasing
 
 git clone https://github.com/l-smash/l-smash.git build
